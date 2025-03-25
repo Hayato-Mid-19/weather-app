@@ -80,7 +80,7 @@ const WeatherApp: React.FC<WeatherAppProps> = ({ defaultCities, defaultWeatherDa
         {loading ? (
             <p className="text-center">データを読み込み中...</p>
         ) : weatherData ? (
-            <WeatherCard data={weatherData} />
+            <WeatherCard client:load data={weatherData} />
         ) : (
             <p className="text-center">天気データがありません</p>
         )}
